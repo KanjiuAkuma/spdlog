@@ -3937,7 +3937,7 @@ FMT_CONSTEXPR detail::udl_formatter<wchar_t> operator"" _format(
   **Example**::
 
     using namespace fmt::literals;
-    fmt::print("Elapsed time: {s:.2f} seconds", "s"_a=1.23);
+    fmt::print("elapsed time: {s:.2f} seconds", "s"_a=1.23);
   \endrst
  */
 FMT_CONSTEXPR detail::udl_arg<char> operator"" _a(const char* s, size_t) {

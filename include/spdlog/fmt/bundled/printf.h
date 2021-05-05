@@ -697,7 +697,7 @@ inline int vprintf(
 
   **Example**::
 
-    fmt::printf("Elapsed time: %.2f seconds", 1.23);
+    fmt::printf("elapsed time: %.2f seconds", 1.23);
   \endrst
  */
 template <typename S, typename... Args,

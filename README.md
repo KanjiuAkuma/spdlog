@@ -175,8 +175,8 @@ spdlog::flush_every(std::chrono::seconds(3));
 void stopwatch_example()
 {
     spdlog::stopwatch sw;    
-    spdlog::debug("Elapsed {}", sw);
-    spdlog::debug("Elapsed {:.3}", sw);       
+    spdlog::debug("elapsed {}", sw);
+    spdlog::debug("elapsed {:.3}", sw);       
 }
 
 ```
@@ -382,24 +382,24 @@ Below are some [benchmarks](https://github.com/gabime/spdlog/blob/v1.x/bench/ben
 [info] **************************************************************
 [info] Single thread, 1,000,000 iterations
 [info] **************************************************************
-[info] basic_st         Elapsed: 0.17 secs        5,777,626/sec
-[info] rotating_st      Elapsed: 0.18 secs        5,475,894/sec
-[info] daily_st         Elapsed: 0.20 secs        5,062,659/sec
-[info] empty_logger     Elapsed: 0.07 secs       14,127,300/sec
+[info] basic_st         elapsed: 0.17 secs        5,777,626/sec
+[info] rotating_st      elapsed: 0.18 secs        5,475,894/sec
+[info] daily_st         elapsed: 0.20 secs        5,062,659/sec
+[info] empty_logger     elapsed: 0.07 secs       14,127,300/sec
 [info] **************************************************************
 [info] C-string (400 bytes). Single thread, 1,000,000 iterations
 [info] **************************************************************
-[info] basic_st         Elapsed: 0.41 secs        2,412,483/sec
-[info] rotating_st      Elapsed: 0.72 secs        1,389,196/sec
-[info] daily_st         Elapsed: 0.42 secs        2,393,298/sec
-[info] null_st          Elapsed: 0.04 secs       27,446,957/sec
+[info] basic_st         elapsed: 0.41 secs        2,412,483/sec
+[info] rotating_st      elapsed: 0.72 secs        1,389,196/sec
+[info] daily_st         elapsed: 0.42 secs        2,393,298/sec
+[info] null_st          elapsed: 0.04 secs       27,446,957/sec
 [info] **************************************************************
 [info] 10 threads, competing over the same logger object, 1,000,000 iterations
 [info] **************************************************************
-[info] basic_mt         Elapsed: 0.60 secs        1,659,613/sec
-[info] rotating_mt      Elapsed: 0.62 secs        1,612,493/sec
-[info] daily_mt         Elapsed: 0.61 secs        1,638,305/sec
-[info] null_mt          Elapsed: 0.16 secs        6,272,758/sec
+[info] basic_mt         elapsed: 0.60 secs        1,659,613/sec
+[info] rotating_mt      elapsed: 0.62 secs        1,612,493/sec
+[info] daily_mt         elapsed: 0.61 secs        1,638,305/sec
+[info] null_mt          elapsed: 0.16 secs        6,272,758/sec
 ```
 #### Asynchronous mode
 ```
@@ -413,16 +413,16 @@ Below are some [benchmarks](https://github.com/gabime/spdlog/blob/v1.x/bench/ben
 [info] *********************************
 [info] Queue Overflow Policy: block
 [info] *********************************
-[info] Elapsed: 1.70784 secs     585,535/sec
-[info] Elapsed: 1.69805 secs     588,910/sec
-[info] Elapsed: 1.7026 secs      587,337/sec
+[info] elapsed: 1.70784 secs     585,535/sec
+[info] elapsed: 1.69805 secs     588,910/sec
+[info] elapsed: 1.7026 secs      587,337/sec
 [info] 
 [info] *********************************
 [info] Queue Overflow Policy: overrun
 [info] *********************************
-[info] Elapsed: 0.372816 secs    2,682,285/sec
-[info] Elapsed: 0.379758 secs    2,633,255/sec
-[info] Elapsed: 0.373532 secs    2,677,147/sec
+[info] elapsed: 0.372816 secs    2,682,285/sec
+[info] elapsed: 0.379758 secs    2,633,255/sec
+[info] elapsed: 0.373532 secs    2,677,147/sec
 
 ```
 

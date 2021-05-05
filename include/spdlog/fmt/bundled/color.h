@@ -511,7 +511,7 @@ void vprint(std::FILE* f, const text_style& ts, const S& format,
   **Example**::
 
     fmt::print(fmt::emphasis::bold | fg(fmt::color::red),
-               "Elapsed time: {0:.2f} seconds", 1.23);
+               "elapsed time: {0:.2f} seconds", 1.23);
   \endrst
  */
 template <typename S, typename... Args,
@@ -527,7 +527,7 @@ void print(std::FILE* f, const text_style& ts, const S& format_str,
   specify text formatting.
   Example:
     fmt::print(fmt::emphasis::bold | fg(fmt::color::red),
-               "Elapsed time: {0:.2f} seconds", 1.23);
+               "elapsed time: {0:.2f} seconds", 1.23);
  */
 template <typename S, typename... Args,
           FMT_ENABLE_IF(detail::is_string<S>::value)>

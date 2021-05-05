@@ -1633,7 +1633,7 @@ inline auto make_args_checked(const S& format_str,
 
   **Example**::
 
-    fmt::print("Elapsed time: {s:.2f} seconds", fmt::arg("s", 1.23));
+    fmt::print("elapsed time: {s:.2f} seconds", fmt::arg("s", 1.23));
   \endrst
  */
 template <typename Char, typename T>
@@ -2106,7 +2106,7 @@ inline void print(std::FILE* f, const S& format_str, Args&&... args) {
 
   **Example**::
 
-    fmt::print("Elapsed time: {0:.2f} seconds", 1.23);
+    fmt::print("elapsed time: {0:.2f} seconds", 1.23);
   \endrst
  */
 template <typename S, typename... Args, typename Char = char_t<S>>
